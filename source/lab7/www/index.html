@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+    <script src="js/angular.min.js"></script>
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="js/ng-cordova.min.js"></script>
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="starter">
+
+    <ion-pane ng-controller="SharingController">
+      <ion-header-bar class="bar-stable">
+      <!--  <input type="text"  placeholder="enter the name to be searched">-->
+
+        <h1 class="title">Ionic Blank Starter</h1><br><br>
+        <!--  <input type="text"  placeholder="enter the name to added">-->
+
+      </ion-header-bar>
+      <ion-content>
+        <div class="card">
+          <pre>Sharing with Social Media:</pre>
+          <div class="item item-text-wrap row">
+            <button ng-click="socialMedia('w','Hi sharing via whatsApp','','http://ngcordova.com/docs/plugins/socialSharing/')" class="button button-light col col-20">
+              <i class="icon ion-social-whatsapp"></i>
+            </button>
+            <button ng-click="socialMedia('f','Hi sharing via Facebook','','http://ngcordova.com/docs/plugins/socialSharing/')" class="button button-light col col-20">
+              <i class="icon ion-social-facebook"></i>
+            </button>
+            <button ng-click="socialMedia('t','Hi sharing via Twitter','','http://ngcordova.com/docs/plugins/socialSharing/')" class="button button-light col col-20">
+              <i class="icon ion-social-twitter"></i>
+            </button>
+            <button ng-click="socialMedia('s','Hi sharing via Sms','','http://ngcordova.com/docs/plugins/socialSharing/')" class="button button-light col col-20">
+              <i class="icon ion-android-textsms"></i>
+            </button>
+            <button ng-click="socialMedia('','Hi sharing via Sms','','http://ngcordova.com/docs/plugins/socialSharing/')" class="button button-light col col-20">
+              <i class="icon ion-ios-email"></i>
+            </button>
+          </div>
+        </div>
+      </ion-content>
+    </ion-pane>
+<!--<ion-nav-view></ion-nav-view>
+</body>-->
+</html>
